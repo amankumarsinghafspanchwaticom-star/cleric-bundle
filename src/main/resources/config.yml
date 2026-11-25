@@ -1,0 +1,59 @@
+weapon:
+  name: "<dark_red><bold>ARACHNAID AXE</bold></dark_red>"
+  # Matches ArachnaidAxe-TexturePack-1.21.11.zip (safe fallback to vanilla Netherite Axe if pack is not equipped)
+  custom-model-data: "arachnaid_axe"
+  lore:
+    - "<gray>Crouch + Right-Click looking down: <white>Spider Web</white></gray>"
+    - "<gray>Double Right-Click a wall: <white>Wall Climb</white></gray>"
+    - "<dark_gray>Unique Craft | Indestructible Drop | Cannot be enchanted</dark_gray>"
+
+crafting:
+  # Craftable until 1 axe exists; locks immediately after 1 craft.
+  # Automatically unlocks again if the axe despawns, falls into the void, or breaks.
+  enabled: true
+  broadcast-on-unlock: true
+  broadcast-on-craft: true
+  shape:
+    - "WCW"
+    - "CAC"
+    - "WFW"
+  ingredients:
+    W: COBWEB
+    C: FERMENTED_SPIDER_EYE
+    A: NETHERITE_AXE
+    F: NETHERITE_INGOT
+
+spider-web:
+  cooldown-seconds: 120
+  range-half-width: 4.0
+  range-vertical: 4.0
+  min-look-down-pitch: 45.0
+  max-ground-search-depth: 5
+  consume-cooldown-on-miss: false
+  target-creative: false
+
+wall-climb:
+  double-click-window-ms: 400
+  max-wall-aim-distance: 3.0
+  wall-attach-distance: 0.85
+  climb-speed: 0.26
+  cancel-push-strength: 0.32
+
+special-webs:
+  drop-items-on-break: false
+  creative-admin-can-break: true
+
+messages:
+  prefix: "<dark_red>[Arachnaid]</dark_red> "
+  no-permission: "<red>You don't have permission to do that.</red>"
+  web-on-cooldown: "<red>Spider Web is on cooldown: <white>{time}s</white> remaining.</red>"
+  web-no-targets: "<gray>No eligible players on solid ground in 8x8 range.</gray>"
+  web-activated: "<green>Spider Web triggered on <white>{count}</white> player(s)!</green>"
+  web-protected: "<red>Special webs can only be broken with Shears or Water!</red>"
+  climb-start: "<green>Wall Climb active! Double-jump to cancel.</green>"
+  climb-stop: "<gray>Wall Climb ended.</gray>"
+  climb-cancelled: "<yellow>Wall Climb cancelled.</yellow>"
+  enchant-blocked: "<red>The ARACHNAID AXE cannot be enchanted.</red>"
+  craft-locked: "<red>The ARACHNAID AXE has already been crafted! No more can be crafted.</red>"
+  craft-unlocked-broadcast: "<yellow>The <dark_red><bold>ARACHNAID AXE</bold></dark_red> <yellow>was lost ({reason})! Its crafting recipe is unlocked again.</yellow>"
+  craft-claimed-broadcast: "<green><white>{player}</white> has crafted the <dark_red><bold>ARACHNAID AXE</bold></dark_red><green>! Crafting is now locked.</green>"
